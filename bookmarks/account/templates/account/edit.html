@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Edit your account{% endblock %}
+
+{% block content %}
+    <h1>Edit your account</h1>
+    <p>You can edit your account using the following form:</p>
+
+<!--В приведенном выше коде вы включаете в форму enctype="multipart/form-data", чтобы разрешить загрузку файлов. -->
+<!--Вы используете HTML-форму для отправки форм user_form и profile_form.-->
+
+    <form method="post" enctype="multipart/form-data">
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Save changes"></p>
+    </form>
+{% endblock %}
