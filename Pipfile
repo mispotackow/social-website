@@ -15,6 +15,7 @@ pyopenssl = "*"
 whitenoise = "*"
 certifi = "*"
 easy-thumbnails = "*"
+redis = "*"
 
 [requires]
 python_version = "3.8"
